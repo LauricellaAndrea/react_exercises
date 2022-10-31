@@ -1,4 +1,4 @@
-import { Hello } from "./hello";
+import { Hello } from "./Hello";
 import ReactDOM from "react-dom";
 
 const hello = <Hello />;
