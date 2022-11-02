@@ -1,5 +1,5 @@
 // import { Hello } from "./Hello";
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom";
 import { App } from "./App"; //App conterrò anche le caratteristiche di hello.js
 
