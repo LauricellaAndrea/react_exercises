@@ -13,6 +13,6 @@ export class Welcome extends React.Component{
 
 // si, è possibile settare un valore di default 
 Welcome.defaultProps = {
-    name: "Johnnie",
+    name: <strong>Johnnie</strong>,
     age: 25
 }
