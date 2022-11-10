@@ -5,3 +5,8 @@ export class Welcome extends React.Component{
         return <p>Welcome, {this.props.name}</p>
     }
 }
+
+// si, è possibile settare un valore di default 
+Welcome.defaultProps = {
+    name: "Johnnie"
+}
