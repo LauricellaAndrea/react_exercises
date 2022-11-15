@@ -15,7 +15,7 @@ export class Counter extends React.Component{
         }, this.props.interval);
     }
     render(){
-        return <h1>{this.state.counter}</h1>
+        return <CounterDisplay counter = {this.state.counter}/>
     }
 }
 
