@@ -19,7 +19,6 @@ export class TodoList extends React.Component {
    e.preventDefault();
 
    this.setState(state =>({
-    input: '',
     items: [...this.state.items, <li key={state.items.length }>{state.input}</li>]
    }))
     
