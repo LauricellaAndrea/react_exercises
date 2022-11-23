@@ -32,7 +32,7 @@ export class UncontrolledLogin extends React.Component {
                 <h3> UncontrolledLogin </h3>
 
                 <form ref={this._reference} onSubmit={this.handleFormSubmit} onChange={this.loginCheck}>
-                    <input name="username"/>
+                    <input name="username" autoFocus/>
                     <input name="password" type="password"/>
                     <input name="remember" type="checkbox"/>
 
