@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from "react-dom/client";
 import { App } from "./App"; //App conterrò anche le caratteristiche di hello.js
 
+
 const AppElement = <App/> // Il compomente viene racchiuso in una variabile
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

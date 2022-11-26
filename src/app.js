@@ -17,14 +17,14 @@ export class App extends React.Component {
         return (
             <div>
                 {/* <Hello /> */}
-                {/* <Welcome age="25" name="John" /> */}
+                <Welcome  />
                 {/* <Counter initialValue={10} increment={5} interval={2000}/> */}
                 {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
-                <Login/>
-                <UncontrolledLogin/>
-                <TodoList/>
+                {/* <Login/> */}
+                {/* <UncontrolledLogin/> */}
+                {/* <TodoList/> */}
             </div>
         );
     }
