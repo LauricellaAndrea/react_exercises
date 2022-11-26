@@ -22,7 +22,7 @@ export class App extends React.Component {
                 {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
-                {/* <Login/> */}
+                <Login/>
                 {/* <UncontrolledLogin/> */}
                 {/* <TodoList/> */}
             </div>
