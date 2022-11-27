@@ -40,9 +40,7 @@ export class TodoList extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <form>
-          <div>
+      <>    
             <input
               type="text"
               value={this.state.input}
@@ -54,10 +52,11 @@ export class TodoList extends React.Component {
               Reset
             </button>
             <button onClick={this.handleRemove} className='remove'>Delete</button>
-          </div>
-        </form>
-        <ul>{this.state.items}</ul>
-      </React.Fragment>
+            
+       
+        {/* <ul>{this.state.items}</ul> */}
+        <ul>{this.props.render(this.state.items, this.handlerRemoveItem)}</ul>
+      </>
     );
   }
 }
