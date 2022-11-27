@@ -27,8 +27,9 @@ export class App extends React.Component {
                 {/* <UncontrolledLogin/> */}
                 <TodoList render={(items, remove)=>{
                 return (
-                <ul className="list-none uppercase">
-                {items.map((item, index)=><li key={item+index}>{item}<button className="ml-10" id={item+index} onClick={remove}>Remove item</button></li>)}
+                <ul>
+                {items.map((item, index)=>
+                <li key={item+index}>{item}<button onClick={remove}></button></li>)}
                 </ul>
                 )
             }}/>
