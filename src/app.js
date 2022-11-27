@@ -9,6 +9,7 @@ import { Login } from './Login'
 import { UncontrolledLogin } from './UncontrolledLogin';
 import { TodoList } from './TodoList'
 import { Welcome } from"./Welcome"
+import { LanguageContext, DisplayLanguage } from './LanguageContext';
 
 
 
@@ -25,12 +26,15 @@ export class App extends React.Component {
                 {/* <InteractiveWelcome/> */}
                 {/* <Login/> */}
                 {/* <UncontrolledLogin/> */}
+                <LanguageContext.Provider value="ita">
+                <DisplayLanguage/>
+                </LanguageContext.Provider>
                 <TodoList render={(items, remove)=>{
                 return (
                 <ul>
                 {items.map((item, index)=>
                 <li key={item+index}>{item}<button onClick={remove}></button></li>)}
-                </ul>
+                </ul> 
                 )
             }}/>
             </Container>
