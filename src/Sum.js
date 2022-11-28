@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function Sum({numbers = []}) {
+export function Sum({numbers = [10, 2, 5]}) {
     let somma = 0;
     numbers.forEach(item => somma+=item)
     return (
