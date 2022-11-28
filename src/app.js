@@ -22,8 +22,8 @@ export function App() {
             <Container>
                 {/* <Hello /> */}
                 <Welcome  />
-                {/* <Counter initialValue={10} increment={5} interval={2000}/> */}
-                <ClickCounter/>
+                <Counter initialValue={10} increment={5} interval={2000}/>
+                {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
                 <Login/>
