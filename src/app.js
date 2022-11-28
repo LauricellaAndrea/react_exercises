@@ -1,6 +1,7 @@
 import React from 'react';
 import { Counter } from "./Counter"
 import { Sum } from './Sum';
+import { GithubUser } from './GithubUser';
 import { Container } from "./Container"
 // import { ClickCounter } from './ClickCounter.';
 import ClickCounter from './ClickCounter.' //import così se uso export default
@@ -19,19 +20,24 @@ import { LanguageContext, DisplayLanguage } from './LanguageContext';
 
 export function App() {
          return (
-            <Container>
+            
+            <div>
+       
                 {/* <Hello /> */}
                 <Welcome  />
-                <Counter initialValue={10} increment={5} interval={2000}/>
+                {/* <Counter initialValue={10} increment={5} interval={2000}/> */}
                 {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
                 <Login/>
+                {/* <GithubUser/> */}
                 {/* <UncontrolledLogin/> */}
                 <Sum/>
+                <GithubUser username={'Andrea'} />
                 <LanguageContext.Provider value="ita">
                 <DisplayLanguage/>
                 </LanguageContext.Provider>
+
 
                 {/* <TodoList render={(items, remove)=>{
                 return (
@@ -44,7 +50,7 @@ export function App() {
             }}/> */}
 
             
-            </Container>
+            </div>
        
         );
     }
