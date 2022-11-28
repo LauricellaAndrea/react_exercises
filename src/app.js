@@ -2,6 +2,7 @@ import React from 'react';
 import { Counter } from "./Counter"
 import { Sum } from './Sum';
 import { GithubUser } from './GithubUser';
+import { GithubUserList } from './GithubUserList';
 import { Container } from "./Container"
 // import { ClickCounter } from './ClickCounter.';
 import ClickCounter from './ClickCounter.' //import così se uso export default
@@ -30,14 +31,15 @@ export function App() {
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
                 <Login/>
-                {/* <GithubUser/> */}
+                <GithubUser username= {'Andrea'}/>
+                <GithubUserList/>
                 {/* <UncontrolledLogin/> */}
                 <Sum/>
-                <GithubUser username={'Andrea'} />
+                {/* <GithubUser username={'Andrea'} /> */}
                 <LanguageContext.Provider value="ita">
                 <DisplayLanguage/>
                 </LanguageContext.Provider>
-
+            
 
                 {/* <TodoList render={(items, remove)=>{
                 return (
