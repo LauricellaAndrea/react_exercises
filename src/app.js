@@ -2,7 +2,8 @@ import React from 'react';
 import { Counter } from "./Counter"
 import { Sum } from './Sum';
 import { Container } from "./Container"
-import { ClickCounter } from './ClickCounter.';
+// import { ClickCounter } from './ClickCounter.';
+import ClickCounter from './ClickCounter.' //import così se uso export default
 import { ClickTracker } from './ClickTracker';
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
@@ -23,7 +24,7 @@ export class App extends React.Component {
                 {/* <Hello /> */}
                 <Welcome  />
                 {/* <Counter initialValue={10} increment={5} interval={2000}/> */}
-                {/* <ClickCounter/> */}
+                <ClickCounter/>
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
                 {/* <Login/> */}
