@@ -1,30 +1,40 @@
-import React, { useState } from "react";
-// import { CounterDisplay } from "./CounterDisplay"
-import {Usestate, useEffect} from "react"
+// import React, { useEffect, useState } from "react";
+// import { CounterDisplay } from "./CounterDisplay";
 
 
-export function Counter(){
-    const [count, setCount] = useState(0);
+// export function Counter({initialValue = 0, increment = 10, interval = 3000}){
+
+//     const [counter, setCounter] = useState(initialValue)
+
+//     useEffect(()=>{
+//         const _interval = setInterval(() => {
+//             setCounter((prev)=>prev===initialValue*10 ? prev = initialValue : prev+increment)
+//         }, interval)
+
+//         return()=>{clearInterval(_interval)}
+//     },[increment, interval, initialValue])
 
 
-    useEffect(() =>{
-        const interval = setInterval(() =>{
-            setCount(count + 1);
-            return () => clearInterval(interval)
-        }, 3000); 
+//     return(
+//         <CounterDisplay counter={counter}/>
+//     )
+// }
 
-        return () => {
-            console.log('Clear all');
-        }
-    })
+import React from "react";
+import {useCounter} from "./UseCounter";
 
-    
+export function Counter({ initialValue = 0 }) {
 
-    return (
-        <>
-        <h1>count: {count}</h1>
-        </>
-    )
+  const { counter, onIncrement, onDecrement, onReset } =  useCounter(initialValue);
+
+  return (
+    <div>
+      <h2>Counter:{counter}</h2>
+      <button onClick={onIncrement}>Incrementor</button>
+      <button onClick={onDecrement}>Decrementor</button>
+      <button onClick={onReset}>Reset</button>
+    </div>
+  );
 }
 
 // export class Counter extends React.Component{
@@ -34,7 +44,7 @@ export function Counter(){
 
 //     // constructor(props){
 //     //     super(props)
-        
+
 //     //     setInterval(() => {
 //     //         this.setState((state)=>{
 //     //             return {counter: state.counter + this.props.increment}
@@ -45,8 +55,8 @@ export function Counter(){
 //     componentDidMount(){
 //         setInterval(() => {
 //             this.setState((state)=>{
-//                    return this.state.counter + this.props.increment 
-                    
+//                    return this.state.counter + this.props.increment
+
 //             })
 //         }, this.props.interval);
 //     }

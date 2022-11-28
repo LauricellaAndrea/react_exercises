@@ -16,42 +16,26 @@ import { Welcome } from"./Welcome"
 import { LanguageContext, DisplayLanguage } from './LanguageContext';
 
 
-
-
-
 export function App() {
          return (
-            
             <div>
-       
-                {/* <Hello /> */}
+               <Hello />
                 <Welcome  />
-                {/* <Counter initialValue={10} increment={5} interval={2000}/> */}
                 {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
-                <Login/>
-                <GithubUser username= {'Andrea'}/>
-                <GithubUserList/>
+                {/* <Login/> */}
+                <Counter/>
+                {/* <GithubUser username= {'Andrea'}/> */}
+                {/* <GithubUserList/> */}
                 {/* <UncontrolledLogin/> */}
-                <Sum/>
+                {/* <Sum/> */}
                 {/* <GithubUser username={'Andrea'} /> */}
-                <LanguageContext.Provider value="ita">
-                <DisplayLanguage/>
-                </LanguageContext.Provider>
+                {/* <LanguageContext.Provider value="ita"> */}
+                {/* <DisplayLanguage/> */}
+                {/* </LanguageContext.Provider> */}
             
 
-                {/* <TodoList render={(items, remove)=>{
-                return (
-                <ul>
-                {items.map((item, index)=>
-                <li key={item+index}>{item}<button onClick={remove}></button></li>)}
-                </ul> 
-                
-                )
-            }}/> */}
-
-            
             </div>
        
         );
