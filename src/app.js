@@ -7,7 +7,7 @@ import ClickCounter from './ClickCounter.' //import così se uso export default
 import { ClickTracker } from './ClickTracker';
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
-import { Login } from './Login'
+import  Login  from './Login'
 import { UncontrolledLogin } from './UncontrolledLogin';
 import { TodoList } from './TodoList'
 import { Welcome } from"./Welcome"
@@ -27,7 +27,7 @@ export class App extends React.Component {
                 <ClickCounter/>
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
-                {/* <Login/> */}
+                <Login/>
                 {/* <UncontrolledLogin/> */}
                 <Sum/>
                 <LanguageContext.Provider value="ita">
