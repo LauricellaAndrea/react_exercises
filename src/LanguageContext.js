@@ -14,13 +14,14 @@ export class DisplayLanguage extends React.Component {
    }
 
   render() {
+    console.log(this.state.language);
     return (
       <>
-        <select value={this.state.language} onChange={this.handleLanguageChange}>
+        <select onChange={this.handleLanguageChange}>
           <option lang={this.context}>Italiano</option>
           <option lang={this.context}>English</option>
         </select>
-        <h1>{this.state.Languaget} Change Language</h1>
+        <h1>{this.state.Languaget} </h1>
       </>
     );
   }
