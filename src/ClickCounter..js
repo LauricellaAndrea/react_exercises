@@ -1,18 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
   const ClickCounter = () => {
   const [contatore, setContatore] = useState(0)
 
-const reset = () => {
-  setContatore(0)
-}  
 
+const clickHandler = () => {
+setContatore((contatore) => {
+  return contatore + 1
+})
+}
+
+const onCounterChange = () => {
+  console.log(`Contatore: ${contatore}`);
+}
+
+
+useEffect(() => {
+  console.log(`The counter is now ${contatore}`);
+}, [contatore])
 
 const aumenta = () => {
   setContatore(Oldvalue => {
     return Oldvalue +1
   })
 }
+const reset = () => {
+  setContatore(0)
+}  
+
 
 return(
 <div>

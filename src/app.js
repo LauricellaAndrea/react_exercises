@@ -17,9 +17,8 @@ import { LanguageContext, DisplayLanguage } from './LanguageContext';
 
 
 
-export class App extends React.Component {
-    render(){
-        return (
+export function App() {
+         return (
             <Container>
                 {/* <Hello /> */}
                 <Welcome  />
@@ -49,4 +48,3 @@ export class App extends React.Component {
        
         );
     }
-}
