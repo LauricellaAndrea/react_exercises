@@ -5,6 +5,12 @@ export default function GithubUser({ username }) {
   
   const {user, loading, error} = useGithubUser(username)
 
+
+  //recupero dati dall'utente 
+  useEffect(() => {
+    onFetch(username);
+  }, [username]);
+
   return (
     <div>
       {loading && <p>Loading...</p>}
