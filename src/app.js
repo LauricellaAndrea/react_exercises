@@ -1,12 +1,12 @@
 import React from 'react';
 import { Counter } from "./Counter"
 import { Sum } from './Sum';
-import { GithubUser } from './GithubUser';
-import { GithubUserList } from './GithubUserList';
-import { Container } from "./Container"
+// import { GithubUserList } from './GithubUserList';
+// import { Container } from "./Container"
 // import { ClickCounter } from './ClickCounter.';
 import ClickCounter from './ClickCounter.' //import così se uso export default
 import { ClickTracker } from './ClickTracker';
+import GithubUser from './GithubUser';
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import  Login  from './Login'
@@ -15,6 +15,8 @@ import { TodoList } from './TodoList'
 import { Welcome } from"./Welcome"
 import { UseForms } from './UseForms';
 import { LanguageContext, DisplayLanguage } from './LanguageContext';
+
+
 
 
 export function App() {
@@ -28,6 +30,7 @@ export function App() {
                 {/* <InteractiveWelcome/> */}
                 {/* <Login/> */}
                 <Counter/>
+                <GithubUser username='Johnnie-Walker' />
                 {/* <GithubUser username= {'Andrea'}/> */}
                 {/* <GithubUserList/> */}
                 {/* <UncontrolledLogin/> */}
