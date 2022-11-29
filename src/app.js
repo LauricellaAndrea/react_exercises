@@ -13,6 +13,7 @@ import  Login  from './Login'
 import { UncontrolledLogin } from './UncontrolledLogin';
 import { TodoList } from './TodoList'
 import { Welcome } from"./Welcome"
+import { UseForms } from './UseForms';
 import { LanguageContext, DisplayLanguage } from './LanguageContext';
 
 
@@ -21,6 +22,7 @@ export function App() {
             <div>
                <Hello />
                 <Welcome  />
+                <UseForms/>
                 {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
