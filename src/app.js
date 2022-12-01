@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from "react" //bisogna impostare useState dentro app, altrimenti da errore
+
+
 import { Counter } from "./Counter"
-import { CarDetails } from "./CarDetails"
+// import { CarDetails } from "./CarDetails"
 import { Sum } from './Sum';
 // import { GithubUserList } from './GithubUserList';
 // import { Container } from "./Container"
@@ -15,29 +17,40 @@ import { UncontrolledLogin } from './UncontrolledLogin';
 import { TodoList } from './TodoList'
 import { Welcome } from"./Welcome"
 import { UseForms } from './UseForms';
-import { LanguageContext, DisplayLanguage } from './LanguageContext';
+import  {LanguageContext}  from './LanguageContext';
+import { DisplayLanguage } from "./DisplayLanguage";
 
 
-const initialData = {
-    model: 'volkswagen',
-    year: 1997,
-    color: 'black'
-}
+
+
+// const initialData = {
+//     model: 'volkswagen',
+//     year: 1997,
+//     color: 'black'
+// }
 
 
 export function App() {
+    const [language, setLanguage] = useState("en")
+   
+
+    function handleLanguageChange(event) {
+        setLanguage(event.target.value)
+    }
+
          return (
             <div>
                <Hello />
                 <Welcome  />
                 <UseForms/>
+            
                 {/* <ClickCounter/> */}
                 {/* <ClickTracker/> */}
                 {/* <InteractiveWelcome/> */}
                 {/* <Login/> */}
                 <Counter/>
                 {/* <GithubUser username='Johnnie-Walker' /> */}
-                <CarDetails initialData={initialData} />
+                {/* <CarDetails initialData={initialData} /> */}
                 {/* <GithubUser username= {'Andrea'}/> */}
                 {/* <GithubUserList/> */}
                 {/* <UncontrolledLogin/> */}
@@ -46,7 +59,17 @@ export function App() {
                 {/* <LanguageContext.Provider value="ita"> */}
                 {/* <DisplayLanguage/> */}
                 {/* </LanguageContext.Provider> */}
-            
+                <div>
+                <select value={language} onChange={handleLanguageChange}>
+                    <option value="en">English</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
+            <LanguageContext.Provider value={language}>
+                <DisplayLanguage />
+
+            </LanguageContext.Provider>
+        
 
             </div>
        
