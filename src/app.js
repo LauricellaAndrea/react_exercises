@@ -10,6 +10,7 @@ import { Sum } from './Sum';
 import ClickCounter from './ClickCounter.' //import così se uso export default
 import { ClickTracker } from './ClickTracker';
 // import GithubUser from './GithubUser';
+import { FilteredList } from "./FilteredList";
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import  Login  from './Login'
@@ -23,12 +24,30 @@ import { DisplayLanguage } from "./DisplayLanguage";
 
 
 
-// const initialData = {
-//     model: 'volkswagen',
-//     year: 1997,
-//     color: 'black'
-// }
 
+const peopleList = [
+    {
+    name:'Paolo',
+    age:20,
+    id:1,
+    },
+    {
+    name:'Giorgia',
+    age: 14,
+    id:2,
+    },
+    {
+    name:'Pippo',
+    age: 19,
+    id: 3,
+    },
+    {
+    name:'Lucas',
+    age:21,
+    id:4,
+    },
+   
+]
 
 export function App() {
     const [language, setLanguage] = useState("en")
@@ -70,7 +89,7 @@ export function App() {
 
             </LanguageContext.Provider>
         
-
+            <FilteredList peopleList={peopleList}/>
             </div>
        
         );
