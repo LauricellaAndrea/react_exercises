@@ -1,5 +1,4 @@
 import React from "react";
-
 export class UncontrolledLogin extends React.Component {
      
     _reference = React.createRef()
