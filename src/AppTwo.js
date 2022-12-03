@@ -8,14 +8,21 @@ export function AppTwo(){
     
     return(
         <BrowserRouter>
+        <div>
+            <h3>I miei Link</h3>
+            <p> 
+            <Link to={"/"}>Home</Link>
+            <Link to = "/counter">Show Counter</Link>
+            <Link to = "/users/:username">Show GitHubUser </Link>
+            </p>
+        </div>
         <Routes>
             <Route path="/" element={<Welcome name={'Johnnie'}/>}/>
             <Route
             path="/counter" element={<Counter count={0} interval={1000} amount={5} />} />
             <Route path="/users/:username" element={<ShowGitHubUser/>}/>
         </Routes>
-        <Link to = "/counter">Show Counter</Link>
-        <Link to = "/users/:username">Show GitHubUser </Link>
+    
         </BrowserRouter>
     )
 }
