@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter"
 import {ShowGitHubUser} from "./ShowGitHubUser"
+import { GitHubUsersList } from "./GithubUserList";
+
 
 export function AppTwo(){
     
@@ -14,6 +16,7 @@ export function AppTwo(){
             <Link to={"/"}>Home</Link>
             <Link to = "/counter">Show Counter</Link>
             <Link to = "*">Coming soon </Link>
+            <Link to = "/users">list </Link>
             </p>
         </div>
 
@@ -22,6 +25,9 @@ export function AppTwo(){
             <Route path="/counter" element={<Counter count={0} interval={1000} amount={5} />} />
             <Route path="/users/username" element={<ShowGitHubUser/>}/>
             <Route path="*" element={<h3>Page not found</h3>}/>
+            <Route path="/users" element={<GitHubUsersList/>} >
+                <Route path=":username" element={<ShowGitHubUser/>}/>
+            </Route>
         </Routes>
     
         </BrowserRouter>
