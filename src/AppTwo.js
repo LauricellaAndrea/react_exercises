@@ -1,13 +1,19 @@
-import { Route, Routes } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Welcome } from "./Welcome";
+import { Counter } from "./Counter"
 
 export function AppTwo(){
     
     return(
-        <div>
+        <BrowserRouter>
         <Routes>
             <Route path="/" element={<Welcome name={'Johnnie'}/>}/>
+            <Route
+            path="/counter" element={<Counter count={5} interval={1000} amount={5} />}
+          />
         </Routes>
-        </div>
+        <Link to = "/counter">Show Counter</Link>
+        </BrowserRouter>
     )
 }
