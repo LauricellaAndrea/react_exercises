@@ -27,6 +27,7 @@ export function AppTwo(){
             <Route path="*" element={<h3>Page not found</h3>}/>
             <Route path="/users" element={<GitHubUsersList/>} >
                 <Route path=":username" element={<ShowGitHubUser/>}/>
+                <Route index element={<p>Aggiungi utente e seleziona il tuo preferito</p>} />
             </Route>
         </Routes>
     
