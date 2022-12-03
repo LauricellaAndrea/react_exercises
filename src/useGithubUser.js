@@ -20,9 +20,9 @@ export function useGithubUser(username) {
     }
   }
 
-//   useEffect(() => {
-//     fetchGithubUser(username);
-//   }, [username]);
+  useEffect(() => {
+    fetchGithubUser(username);
+  }, [username]);
 
   return {
     user,
