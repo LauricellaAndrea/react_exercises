@@ -4,6 +4,7 @@ import { Welcome } from "./Welcome";
 import { Counter } from "./Counter"
 import {ShowGitHubUser} from "./ShowGitHubUser"
 import { GitHubUsersList } from "./GithubUserList";
+import { GitHubUser } from "./GitHubUser";
 
 
 export function AppTwo(){
@@ -18,6 +19,7 @@ export function AppTwo(){
             <Link to = "*">Coming soon </Link>
             <Link to = "/users">list </Link>
             <Link to = 'users'> Users</Link>
+            <Link to = '/github'>Github</Link>
             </p>
         </div>
 
@@ -31,6 +33,7 @@ export function AppTwo(){
                 <Route index element={<p>Aggiungi utente e seleziona il tuo preferito</p>} />
             </Route>
             <Route path="users" element={<useGithubUser/>} />
+            <Route path="/github" element={<GitHubUser  />} />
         </Routes>
     
         </BrowserRouter>
