@@ -31,7 +31,7 @@ import { useGithubUser } from "./useGithubUser";
 
 export function GitHubUser({username}){
 
-    const {data, error, loading} = useGithubUser()
+    const {data, error, loading} = useGithubUser(username)
 
     // function handleFetch(){
     //     fetchData(username)

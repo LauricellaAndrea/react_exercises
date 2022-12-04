@@ -17,6 +17,7 @@ export function AppTwo(){
             <Link to = "/counter">Show Counter</Link>
             <Link to = "*">Coming soon </Link>
             <Link to = "/users">list </Link>
+            <Link to = 'users'> Users</Link>
             </p>
         </div>
 
@@ -29,6 +30,7 @@ export function AppTwo(){
                 <Route path=":username" element={<ShowGitHubUser/>}/>
                 <Route index element={<p>Aggiungi utente e seleziona il tuo preferito</p>} />
             </Route>
+            <Route path="users" element={<useGithubUser/>} />
         </Routes>
     
         </BrowserRouter>
