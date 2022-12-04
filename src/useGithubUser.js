@@ -4,7 +4,7 @@ const fetcher = url => fetch(url).then(response => response.json())
 //Questa funzione restituisce una promise che conterrà i file restituiti dal server
 
 export function useGithubUser(props){
-const {data, error } = useSWR(`https://api.github.com/users/${props.user}`, fetcher)
+const {data, error } = useSWR(() => props.user !== null ? `https://api.github.com/users/${props.user}` : null, fetcher)
 
   return <div>
     {!data &&error && <h3>Loading...</h3>}
